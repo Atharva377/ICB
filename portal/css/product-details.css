@@ -1,0 +1,880 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+} */
+body
+{
+    margin: 0;
+    text-transform: capitalize;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+}
+/* Container styles */
+.container {
+    max-width: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: max-width 0.3s ease;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Expanded container style */
+.container.expanded {
+    max-width: 500px;
+    height: auto;
+}
+
+/* Filter buttons container */
+.filter-container {
+    background: radial-gradient(#f5f5f5, #e0e0e0); /* Gradient background */
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Type title style */
+.product-type-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 20px; /* Larger font size */
+    color: #333;
+}
+
+/* Filter buttons */
+/* Filter buttons */
+.filter-button {
+    display: flex;
+    width: 156px;
+    height: 58px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #0F8ED6;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover effect */
+.filter-button:hover {
+    background: linear-gradient(to right, #007BFF, #0056b3); /* Gradient background on hover */
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+
+/* Product List container */
+.product-list-container {
+    height: 230px;
+    flex: 1;
+    background: radial-gradient(#fff, #f0f0f0); /* Gradient background */
+    border: 1px solid #ddd;
+    padding: 20px; /* Larger padding */
+    margin: 20px 0;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow-y: scroll;
+}
+
+/* Custom scrollbar styles */
+.product-list-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.product-list-container::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+}
+
+.product-list-container::-webkit-scrollbar-thumb {
+    background-color: #007BFF;
+    border-radius: 10px;
+}
+
+/* List item container */
+.list-item-container {
+    background: linear-gradient(to right, #007BFF, #0056b3); /* Gradient background */
+    color: #fff;
+    padding: 15px; /* Larger padding */
+    border-radius: 10px; /* Rounded corners */
+    margin: 10px 0;
+    font-size: 16px; /* Larger font size */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Price Range slider */
+.price-slider {
+    width: 100%;
+}
+
+
+/* Price Range slider */
+.price-slider-container {
+width: 100%;
+position: relative;
+margin-top: 20px;
+border-radius: 12px;
+overflow: hidden;
+}
+
+.price-slider {
+width: 100%;
+height: 20px; /* Increase the height for better visibility */
+background-color: #f5f5f5;
+border-radius: 5px;
+position: relative;
+}
+
+.price-range {
+width: 100%;
+height: 100%;
+background: linear-gradient(to right, #007BFF, #0056b3);
+position: absolute;
+top: 0;
+left: 0;
+border-radius: 5px;
+}
+
+.price-scrollbar {
+width: 100%;
+height: 10px;
+background-color: #f5f5f5;
+position: absolute;
+bottom: 0;
+left: 0;
+cursor: pointer;
+}
+
+/* Price input fields */
+.price-input {
+    width: 30%;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Price label */
+#price-label {
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.3em;
+    margin-left: -.6em;
+    border-radius: 50px;
+    background: #D9D9D9;
+}
+.ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+    background:#419FD9 ;
+}
+
+/* Style for the entire product catalog filter container */
+.product-catalog-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px; /* Adjust width as needed */
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Add scrollbar if needed */
+}
+
+/* Scrollbar styles */
+.product-catalog-filter::-webkit-scrollbar {
+    width: 8px;
+}
+
+.product-catalog-filter::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+}
+
+.product-catalog-filter::-webkit-scrollbar-thumb {
+    background-color: #007BFF;
+    border-radius: 10px;
+}
+/* Style for the entire product catalog filter container */
+.product-catalog-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px; /* Adjust width as needed */
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Add scrollbar if needed */
+}
+
+/* Header styles */
+.filter-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Updated List item container to look like filter options */
+.list-item-container {
+    background: linear-gradient(to right, #007BFF, #0056b3); /* Gradient background */
+    color: #fff;
+    padding: 15px; /* Larger padding */
+    border-radius: 10px; /* Rounded corners */
+    margin: 10px 0;
+    font-size: 16px; /* Larger font size */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Add hover effect for the filter options */
+.list-item-container:hover {
+    background: linear-gradient(to right, #0056b3, #003b80); /* Gradient background on hover */
+    transform: translateY(-5px);
+}
+
+/* Add a little space between filter options */
+.product-list-container .list-item-container + .list-item-container {
+    margin-top: 5px;
+}
+/* Filter toggle button */
+.filter-toggle-button {
+    position: absolute;
+    top: -0px;
+    right: 450PX;
+    background-color: #0F8ED6;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-toggle-button:hover {
+    background-color: #0056b3;
+}
+
+/* Exit button */
+.exit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+/* Exit button */
+.exit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.exit-button:hover {
+    background-color: darkred;
+}
+
+.filter-container {
+    display: none;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .filter-toggle-button {
+        position: initial;
+        top: -0px;
+        right: 40PX;
+        MARGIN-LEFT: -170PX;
+        background-color: #0F8ED6;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+    }
+
+}
+
+
+/* PRODUXT DETAILS CONTAINER */
+
+#containerProduct
+{
+    padding-top: 50px;
+    margin-top: -380PX;
+}
+
+/* #containerD
+{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 80px 40px;
+} */
+
+#productDetails {
+    width: 100%;
+    max-height: 600px; /* Adjust the max-height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 20px; /* Add some padding to create space for the scrollbar */
+}
+
+h1
+{
+    font-size: 35px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+h4
+{
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(3, 122, 122);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+#productPreview
+{
+    padding-bottom: 10px;
+}
+#productPreview > img
+{
+    width: 50px;
+    padding: 10px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+p
+{
+    font-size: 15px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+.product-details-buttons{
+    width: ;
+}
+/* Container for the buttons */
+.button-container {
+    display: flex;
+    gap: 50px; /* Adjust the gap as needed */
+}
+
+/* Button One (Red) */
+.button1 {
+    /* padding: 5px 100px; */
+    color: white;
+    background-color: #419FD9; /* Red background color */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+/* Button Two (Blue) */
+.button2 {
+    /* padding: 10px 100px; */
+    color: white;
+    background-color: #FF0000; /* Blue background color */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+  
+/* Container for the product details */
+#containerD {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 80px 40px;
+    height: 100%;
+}
+
+/* Slider styling */
+.slider {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 1em;
+    width: 350px;
+    height: 350px;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5);
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* Container for the images */
+.img-container {
+    display: flex;
+    position: relative;
+    width: auto;
+    height: auto;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* Image styling */
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+}
+
+/* Positioning of previous and next buttons */
+.previous {
+    left: 100px;
+    overflow: visible;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Hover effect for navigation buttons */
+.fa-solid:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* Styling for the popup */
+.popup {
+    display: none; /* Initially hide the popup */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    width: 889px;
+    height: 535px;
+    border-radius: 16px;
+    background: #ffffff; /* White background */
+    z-index: 1000;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Optional box shadow */
+}
+
+.popup-content {
+    display: flex;
+    height: 100%;
+}
+
+/* Styling for the right part */
+.right-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.right-part h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.qr-code-container {
+    margin-bottom: 20px;
+}
+
+.qr-code {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.cta {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+p a {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Styling for the share container */
+.share-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 360px;
+    height: 50px;
+    background-color: palegreen;
+}
+
+/* Styling for the copy icon (SVG) */
+.copy-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+    fill: #333; /* Icon color */
+}
+
+/* Styling for the share button */
+button#share-button {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #3f51b5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Container for the share button */
+.share-container button#share-button {
+    width: 100px; /* Set the button's width */
+    height: auto; /* Set the button's height */
+    margin-left: 230px;
+}
+
+button#share-button:hover {
+    background-color: #303f9f;
+}
+
+/* Styling for the left image container */
+.popup-left {
+    flex: 1;
+    padding: 20px;
+    color: #333;
+    text-align: center;
+    border-right: 1px solid #ccc; /* Thin vertical line */
+}
+
+.popup-left h1 {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Add spacing between heading and image */
+}
+
+.image-container {
+    width: 293px;
+    height: 260px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: lightgray -113.794px -1.564px / 124.697% 100% no-repeat;
+    overflow: hidden; /* Hide overflow if image exceeds container size */
+    margin-left: 20%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.popup-right {
+    border-right: none; /* Remove the border on the right side of the right section */
+}
+
+/* Background blur for the underlying content */
+.blur-background {
+    filter: blur(5px); /* Apply background blur */
+}
+.share-link-popup{
+    margin-left: -433px;
+
+}
+/* Exit button styles */
+.popup-exit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.popup-exit:hover {
+    background-color: darkred;
+}
+.sort-container {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    width: 100%;
+}
+
+.sort-label {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 16px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.sort-options {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ... previous CSS ... */
+
+.sort-option {
+    padding: 16px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transition for smoother hover effect */
+    display: flex;
+    align-items: center; /* Center the text and icons vertically */
+}
+
+.sort-option:hover {
+    background-color: #f0f0f0; /* Slight color change on hover */
+    transform: scale(1.02); /* Slight scale increase on hover */
+}
+
+.sort-option::before {
+    content: "\2191"; /* Unicode up arrow character */
+    margin-right: 8px; /* Add spacing between icon and text */
+    font-size: 14px; /* Adjust icon size */
+}
+
+.sort-option[data-sort$="-desc"]::before {
+    content: "\2193"; /* Unicode down arrow character for descending options */
+}
+
+/* ... previous CSS ... */
+
+.sort-container {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    width: 100%;
+    transform: scaleY(0); /* Initially, hide the container by scaling it vertically to 0 */
+    transform-origin: top; /* Scale from the top */
+    transition: transform 0.3s ease-in-out;
+    margin-left: 900px;
+}
+
+.sort-container.open { 
+    transform: scaleY(1); /* Open the container by scaling it vertically to 1 */
+}
+/* ... previous CSS ... */
+
+.sort-option {
+padding: 16px;
+font-size: 16px;
+color: #333;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.2s ease;
+display: flex;
+align-items: center;
+border-bottom: 2px solid #2196F3; /* Add a blue border to the bottom of each sorting option */
+}
+
+.sort-option::before {
+content: "\2191";
+margin-right: 8px;
+font-size: 14px;
+}
+
+.sort-option[data-sort$="-desc"]::before {
+content: "\2193";
+}
+#toggle-sort-container {
+    position: absolute;
+    top: 5px; /* Adjust this value to move it higher or lower */
+    left: 900px; /* Horizontal positioning */
+}
+
+/* ... rest of the CSS ... */
+
+
+
+@media (max-width: 768px) {
+    .sort-container {
+        max-width: 100%;
+        border-radius: 0;
+    }
+}
+
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    /* Adjust the width and padding as needed */
+    .filter-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+
+
+
+/* ----------------------------- MEDIA QUERY --------------------------- */
+
+@media(max-width: 1300px)
+{
+    h1
+    {
+        font-size: 28px;
+    }
+    #productPreview > img
+    {
+        width: 40px;
+        padding: 10px 10px;
+        padding-bottom: 30px;
+    }
+    button
+    {
+        padding: 8px 13px;
+        background-color: rgb(3, 122, 122);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+@media(max-width: 1170px)
+{
+    h1
+    {
+        font-size: 22px;
+    }
+    #productPreview > img
+    {
+        width: 40px;
+        padding: 10px 10px;
+        padding-bottom: 30px;
+    }
+    button a
+    {
+        font-size: 15px;
+
+    }
+    h4, p
+    {
+        font-size: 13px;
+    }
+    h3
+    {
+        font-size: 15px;
+    }
+
+}
+
+@media(max-width: 900px)
+{
+    /* #containerProduct */
+    #containerD
+    {
+        width: 60%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #imageSection
+    {
+        width: 100%;
+        text-align: center;
+    }
+    #imageSection img
+    {
+        text-align: center;
+        width: 70%;
+        float: none;
+    }
+    #productDetails
+    {
+        width: 100%;
+    }
+    #button
+    {
+        text-align: center;
+    }
+}
+
+@media(max-width: 650px)
+{
+    #containerD
+    {
+        width: 80%;
+    }
+}
+
+/* Responsive styles */
+@media (min-width: 601px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .filter-container {
+        margin-right: 20px;
+    }
+}
+
+
+
+
+/* NEWW FILTER  */

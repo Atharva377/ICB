@@ -1,0 +1,76 @@
+/* Product Component Styles */
+.product-component {
+    width: 255px;
+    height: 335px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    cursor: pointer;
+    margin-right: 20px; /* Add some margin between cards */
+  }
+  
+  /* Card Image Styles (Double Size) */
+  .card-image {
+    width: 100%;
+    height: 80%; /* Adjusted size to make it double the height */
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Card Content Styles */
+  .card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+  }
+  
+  /* Product Name Styles */
+  .name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+    text-align: center; /* Center title text */
+  }
+  
+  /* Button Styles */
+  .button {
+    border: none;
+    font-size: 14px;
+    color: #FFF;
+    padding: 10px 20px;
+
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #button1.button {
+    background-color: #4070F4;
+  }
+  
+  #button2.button {
+    background-color: red; /* Use lowercase "red" for the color value */
+    font-size: 13px;
+  }
+  
+  
+  /* .button #button3 {
+    background-color: #4070F4;
+  }
+   */
+  
