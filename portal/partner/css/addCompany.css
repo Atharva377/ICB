@@ -1,0 +1,251 @@
+/* Sign up form */
+.add_partner {
+  border-radius: 12px;
+  background: rgba(217, 217, 217, 0.25);
+  box-shadow: 0px 4px 4px 0px #f4f6f9;
+  max-width: 80vw;
+  margin: 2vw auto;
+  padding: 4vw;
+  min-height: 60vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+
+.form_details {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+#company_details_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border-right: solid var(--blue--600) 2px;
+  /* box-shadow: 2px 0 0px var(--blue--600); */
+}
+
+#partnerLogoPreview {
+  border-radius: 50%;
+  /* object-fit: cover; */
+  min-width: 70%;
+  min-height: 70%;
+  max-width: 70%;
+  max-height: 70%;
+  overflow: hidden;
+}
+
+.partner_logo {
+  border-radius: 50%;
+  font-weight: 600;
+  font-family: Roboto;
+  border: none;
+  background: var(--national--flag---flag-indigo);
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 2px var(--shading--300);
+}
+
+#previewCompanyName {
+  color: var(--national--flag---flag-blue);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+#previewCompanyTagLine {
+  color: var(--black);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Comapny form section details */
+.form_section_inputs {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-column-start: 5%;
+  grid-column-gap: 10%;
+  min-height: 100%;
+}
+
+.input_legend {
+  border-radius: 6px;
+  border: 1px solid var(--shading--500);
+  margin: 0.5vw;
+  display: flex;
+  align-items: center;
+  background: var(--white);
+}
+
+.input_legend i {
+  min-height: 100%;
+  min-width: 2vw;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  color: #697089;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-family: Font Awesome 6 Free; */
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  margin: 0 0.5vw;
+  padding-right: 0.5vw;
+  border-right: 1px solid var(--shading--500);
+}
+
+.input_legend input {
+  width: 100%;
+  height: 100%;
+  color: #303651;
+  font-family: Roboto;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.input_legend_transparent {
+  background-color: transparent;
+  border: none;
+}
+
+.submit_btn {
+  width: 80vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.signup {
+  border-radius: 6px;
+  background: var(--national--flag---flag-green);
+  color: var(--blue----800);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  outline: none;
+  border: none;
+  padding: 0.5vw;
+  /* position: absolute; */
+  /* right: 10%; */
+  /* bottom: 6%; */
+}
+
+.signup i {
+  color: #2e5f3b;
+  text-align: center;
+  /* font-family: Font Awesome 6 Free; */
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.phone i {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 500px) {
+  /* Header */
+  header {
+    flex-wrap: wrap;
+  }
+  .header_logo {
+    max-width: 30vw;
+  }
+
+  #icb_logo {
+    order: 1;
+  }
+  .welcome_message {
+    order: 3;
+    min-height: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 90vw; */
+  }
+  .bs_logo {
+    order: 2;
+  }
+
+  .add_partner {
+    margin-bottom: 6vh;
+  }
+
+  #company_form_section {
+    height: fit-content;
+  }
+
+  /* Form */
+
+  .form_details {
+    display: grid;
+    grid-template-columns: auto;
+    /* max-height: fit-content; */
+  }
+
+  #company_details_section {
+    min-height: 40vh;
+    display: flex;
+    margin-bottom: 2vh;
+    border: none;
+  }
+
+  .input_legend_transparent {
+    display: none;
+  }
+
+  .form_section_inputs {
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 1vh;
+  }
+
+  .input_legend {
+    min-height: 4vh;
+  }
+
+  .input_legend i {
+    min-width: 6vw;
+  }
+
+  .phone i {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+  .form_details {
+    display: grid;
+    grid-template-columns: auto;
+    /* max-height: fit-content; */
+  }
+
+  #company_details_section {
+    max-width: 40vw;
+    margin: auto;
+    border: none;
+    margin-bottom: 2vh;
+  }
+}

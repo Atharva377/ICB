@@ -1,0 +1,93 @@
+/* Color styles */
+:root {
+  --blue----800: #d7d7d7;
+  --blue--700: #d9d9d9;
+  --blue--600: #9ba4bd;
+  --blue--500: #7c8cb0;
+  --blue--400: #6c83a9;
+  --blue----300: #48669a;
+  --blue----200: #24498b;
+  --blue----100: #002c7c;
+  --cyan----400: #18a49a;
+  --cyan----300: #1eb494;
+  --cyan----200: #24c48e;
+  --cyan----100: #2ad587;
+  --neon--blue----700: #034890;
+  --neon--blue----600: #0564a2;
+  --neon--blue----500: #0780b4;
+  --neon--blue----400: #099cc6;
+  --neon--blue----300: #0bb8d8;
+  --neon--blue----200: #0dd4ea;
+  --neon--blue----100: #0ff0fc;
+  --shading----900: #0c0e19;
+  --shading----800: #1c2035;
+  --shading----700: #303651;
+  --shading----600: #4a516d;
+  --shading--500: #697089;
+  --shading--400: #c7cbd8;
+  --shading----300: #c7cbd8;
+  --shading--200: #e6e8f0;
+  --shading--100: #f4f6f9;
+  --national--flag---flag-green: #509e2f;
+  --national--flag---flag-white: #ffffff;
+  --national--flag---flag-indigo: #ff8f1c;
+  --national--flag---flag-blue: #250e62;
+  --green----900: #eef7f0;
+  --green----800: #c9e4d0;
+  --green----700: #a2d1ae;
+  --green----600: #7bbe8c;
+  --green----500: #54ab6a;
+  --green----400: #418653;
+  --green----300: #2e5f3b;
+  --green----200: #1b3823;
+  --green----100: #08110b;
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Font size */
+  /* Text */
+  --tx-sd-p: calc(16px + 0.390625vw); /* 320px */
+  --tx-md-p: calc(18px + 0.390625vw); /* 768px */
+  --tx-md-l: calc(19px + 0.390625vw); /* 1024px  landscape*/
+  --tx-ld-l: calc(20px + 0.390625vw); /* 1280px landscape */
+  --tx-ldx-l: calc(21px + 0.390625vw); /* 1536px */
+  --tx-ldxx-l: calc(23px + 0.390625vw); /* 1920px */
+  --tx-ldxxx-l: calc(25px + 0.390625vw); /* 2560px */
+  --tx-ldu-l: calc(28px + 0.390625vw); /* 2560px */
+
+  /* Sub title - 3 */
+  --st-sd-p: calc(16px+0.390625vw); /* 320px */
+  --st-md-p: calc(18px+0.390625vw); /* 768px */
+  --st-md-l: calc(19px+0.390625vw); /* 1024px  landscape*/
+  --st-ld-l: calc(20px+0.390625vw); /* 1280px landscape */
+  --st-ldx-l: calc(21px+0.390625vw); /* 1536px */
+  --st-ldxx-l: calc(23px+0.390625vw); /* 1920px */
+  --st-ldxxx-l: calc(25px+0.390625vw); /* 2560px */
+  --st-ldu-l: calc(28px+0.390625vw); /* 2560px */
+
+  /* Border */
+  --b-sd: 6px;
+  --b-md: 8px;
+  --b-ld: 12px;
+  --b-ld-x: 16px;
+  --b-ld-xx: 20px;
+  --b-ld-xxx: 20px;
+
+  /* Padding */
+  /* --p-sd: 2vw;
+  --p-md: 1.5px;
+  --p-ld: 1px;
+  --p-ld-x: 16px;
+  --p-ld-xx: 20px;
+  --p-ld-xxx: 20px; */
+}
+
+@media (min-width: 500px) {
+  :root {
+    --text: calc(18px + 0.390625vw);
+    --text-sub: calc(32px+0.390625vw);
+    --text-title: calc(28px+0.390625vw);
+  }
+}
+
+/* calc(32px+0.390625vw) */

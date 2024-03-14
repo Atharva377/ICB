@@ -1,0 +1,83 @@
+body {
+  background: linear-gradient(
+    119deg,
+    #ff8f1c 9.49%,
+    #fff 33.3%,
+    #fff 62.37%,
+    #509e2f 86.51%
+  );
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header_logo {
+  max-width: 14vw;
+}
+
+.welcome_message__title {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.welcome_message__tagline {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.bs_logo p {
+  color: #000;
+  font-family: Roboto;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@media (max-width: 500px) {
+  /* Header */
+  header {
+    flex-wrap: wrap;
+  }
+  .header_logo {
+    max-width: 30vw;
+  }
+
+  #icb_logo {
+    order: 1;
+  }
+  .welcome_message {
+    order: 3;
+    min-height: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 90vw; */
+  }
+  .bs_logo {
+    order: 2;
+  }
+
+  .add_partner {
+    margin-bottom: 6vh;
+  }
+
+  #company_form_section {
+    height: fit-content;
+  }
+}
